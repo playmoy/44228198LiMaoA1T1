@@ -1,0 +1,69 @@
+##Q2
+import random    
+ ## Import the module named random
+a=random.randint(0,1)  
+ ## let a be a random variable with the equal probabilities to be 0 or 1
+if a==0:
+  print("Heads")
+ ## if a is equal to 1, the outcome is shown as “Heads”.
+else:
+  print("Tails")
+ ## if the above condition is not satisfied, the outcome is shown as “Tails”.
+
+
+
+##Q3
+num=float(input("input your income："))
+ ##firstly the code shows “input your income” in the screen, then the user can input income in the form of number. The code will convert this number to a float type and let it be num.
+if 0<num<18200:
+        tax_liability=0
+        after_tax=num
+        print ("your tax liability is: ",tax_liability)
+        print ("your after-tax income is: ",after_tax)
+elif 18200<=num<37000:
+        tax_liability=(num-18200)*0.19
+        after_tax=num-tax_liability
+        print ("your tax liability is: ",tax_liability)
+        print ("your after-tax income is: ",after_tax)
+elif  37000<=num<87000:
+        tax_liability=(num-37000)*0.325+3572
+        after_tax=num-tax_liability
+        print ("your tax liability is: ",tax_liability)
+        print ("your after-tax income is: ",after_tax)
+elif  87000<=num<180000:
+        tax_liability=(num-87000)*0.37+19822
+        after_tax=num-tax_liability
+        print ("your tax liability is: ",tax_liability)
+        print ("your after-tax income is: ",after_tax)
+elif  num>180000:
+        tax_liability=(num-180000)*0.45+54532
+        after_tax=num-tax_liability
+        print ("your tax liability is: ",tax_liability)
+        print ("your after-tax income is: ",after_tax)
+ ##according to the number the user input, this code will calculate tax liability using related function based on the rule in Table 1 in different ranges, then find the after-tax income. Lastly, it will print:
+ ##your tax liability is ??
+ ##your after-tax income is ??
+
+
+
+##Q4
+n=int(input("enter n:"))
+ ## firstly the code shows “enter n:” in the screen, then the user can input n. This code will keep the integer part and let it be n
+a=1
+b=0
+c=0
+ ##Let a=1, b=0 and c=0
+if n<=0:
+  print ("Please enter a postive number")
+ ## if n<=0 “Please enter a positive number” will be printed
+
+elif n>0:
+  print (a)
+ ##if n>0, print a at first (which equals 1 at the first time).
+for counter in range(0,n):
+		 
+  c=b
+  b=a
+  a=c+b
+  print (a)
+ ##if the last number of outcome is smaller than n, let c=b b=a and a=c+b. Repeating this process until n is reached. Lastly it will print all the first n numbers in the series.
